@@ -11,3 +11,7 @@ json.formatted do
   json.updated_at contact.friendly_updated_at
   json.phone_number contact.japan_phone_number
 end
+
+json.groups do 
+  json.array! contact.groups, partial: "api/groups/group", as: :group
+end
